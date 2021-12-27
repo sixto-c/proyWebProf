@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row">
+        <div class="col-8">
+            <form action="/registro" method="post">
+            <div class="form-group">
+                <label for="nombre">Nombre de usuario:</label>
+                <input  class="form-control" type="text" name="matricula" placeholder="Su dni">
+                <label for="contraseña">Contraseña:</label>
+                <input  class="form-control" type="password" name="contraseña" placeholder="contraseña">
+
+                <label for="nombre">Nombre:</label>
+                <input  class="form-control" type="text" name="nombre" placeholder="nombre">
+                <label for="apellido">Apellido:</label>
+                <input  class="form-control" type="text" name="apellido" placeholder="apellido">
+                
+                <label for="mail">Mail:</label>
+                <input  class="form-control" type="mail" name="mail" placeholder="mail">
+                <label for="localidad">localidad:</label>
+                <input  class="form-control" type="text" name="localidad" placeholder="localidad">
+               
+                <label for="apellido">seleccione su carrrera:</label>
+                <select class="form-select" name="no_carrera">
+                    {{#each numCarreras}}
+                    <option value="{{nro_carrera}}"> {{nom_carrera}}</option>
+                   {{/each}}
+                </select>
+                <br><br><br>
+                <button class="btn btn-primary" type="submit">Enviar</button>
+            </div>
+            </form>
+        </div>
+    </div>
+      <h6 class="registro_mensaje">ya tienes cuenta?<a href="/login">  inicia sesión</a></h6>
+</div>

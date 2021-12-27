@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-8">
+            <form action="/cursos/apuntarse" method="post">
+            <div class="form-group">
+                
+                <label for="apellido">seleccione el curso que desea tomar:</label>
+                <select class="form-select" name="num_materia">
+                    {{#each cursos}}
+                    <option value="{{num_materia}}"> {{materia}}</option>
+                   {{/each}}
+                </select>
+                <br><br><br>
+                <button class="btn btn-primary" type="submit">Enviar</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
